@@ -230,7 +230,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!70 &108337278
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -259,8 +259,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: afb21d36907b20444971b9f8bd448224, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 15
+  playerRigidbody2D: {fileID: 108337277}
+  playerColider2D: {fileID: 108337278}
+  speed: 10
   jumpForce: 10
+  layerMask:
+    serializedVersion: 2
+    m_Bits: 8
 --- !u!1 &387548273
 GameObject:
   m_ObjectHideFlags: 0
@@ -273,7 +278,7 @@ GameObject:
   - component: {fileID: 387548276}
   - component: {fileID: 387548275}
   - component: {fileID: 387548274}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Static Sprite
   m_TagString: Ground
   m_Icon: {fileID: 0}
